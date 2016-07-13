@@ -67,7 +67,7 @@ fi
 if [ ! -h "$MAGENTO_ROOT" ]
 then
         echo "Linking to Magento Root"
-	ln -s /var/www/html/vendor/magento/core $MAGENTO_ROOT
+        ln -s /var/www/html/vendor/magento/core $MAGENTO_ROOT
 fi
 
 # Check if there is alreay an index.php. If yes, abort the installation process.
