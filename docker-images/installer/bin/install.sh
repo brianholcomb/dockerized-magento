@@ -64,9 +64,10 @@ then
 fi
 
 # Check if the specified MAGENTO_ROOT direcotry exists
-if [ ! -d "$MAGENTO_ROOT" ]
+if [ ! -h "$MAGENTO_ROOT" ]
 then
-	mkdir -p $MAGENTO_ROOT
+        echo "Linking to Magento Root"
+	ln -s /var/www/html/vendor/magento/core $MAGENTO_ROOT
 fi
 
 # Check if there is alreay an index.php. If yes, abort the installation process.
